@@ -1,4 +1,5 @@
 #include<iostream>
+#include<stdlib.h>
 using namespace std;
 class sales{
     int sno;
@@ -10,26 +11,27 @@ class sales{
     public:
         void in_data();
         void out_data();
-}
+};
 void sales::in_data(){
     wage=100.28;
     totalwage=0.0;
     cout<<"\nEnter the id of employee";
     cin>>sno;
-    cout<<"\nEnter the total working hours";
-    cin>>whr;
     cout<<"Enter name of employee";
     gets(sname);
+    cout<<"\nEnter the total working hours";
+    cin>>whr;
+    
     calcwage();
 }
 void sales::out_data(){
     cout<<"\n\t\t\t\t\t\t\t KK & co ";
-    cout<<"\n\t\t\t\t\t\t\t ~~~~~~~";
-    cout<<"ID:"<<sno;
-    cout<<"Name:"<<sname;
-    cout<<"wage per hour:"<<"$"<<wage;
-    cout<<"Total hours worked:"<<whr;
-    cout<<"Total Wages:"<<"$"<<totalwage;
+    cout<<"\n\t\t\t\t\t\t\t ~~~~~~~"<<"\n";
+    cout<<"\n\t\t\t\t\t\t\t ID:"<<sno<<"\n";
+    cout<<"\n\t\t\t\t\t\t\t Name:"<<sname<<"\n";
+    cout<<"\n\t\t\t\t\t\t\t wage per hour:"<<"$"<<wage<<"\n";
+    cout<<"\n\t\t\t\t\t\t\t Total hours worked:"<<whr<<"\n";
+    cout<<"\n\t\t\t\t\t\t\t Total Wages:"<<"$"<<totalwage<<"\n";
 }
 int main(){
     sales sal;
